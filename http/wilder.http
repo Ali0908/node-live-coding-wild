@@ -2,7 +2,7 @@ POST   http://localhost:3000/api/wilder
 Content-Type: application/json
 
 {
-    "name": "Nour"
+    "name": "Jean"
 }
 ###
 DELETE http://localhost:3000/api/wilder
@@ -32,6 +32,6 @@ PUT http://localhost:3000/api/addSkill
 Content-Type: application/json
 
 {
-    "wilderName": "Nour",
-    "skillName": "PHP"
+    "wilderName": "Jean",
+    "skillName": "Javascript"
 }

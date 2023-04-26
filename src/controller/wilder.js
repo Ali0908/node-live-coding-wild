@@ -53,9 +53,10 @@ delete:  async (req, res) => {
             },
 addSkill: async (req, res) => {
                 try {
+                   
                     const wilderToUpdate = await dataSource
                     .getRepository(Wilder)
-                    .findOneBy({ name: req.body.wilderName });
+                    .findOneBy({  name:req.body.wilderName});
                     console.log(wilderToUpdate);
                    
                     const skillToAdd = await dataSource
@@ -67,6 +68,7 @@ addSkill: async (req, res) => {
                     res.send("Skill added to wilder");
                 }
                 catch (err) {
+                    console.log(err);
                     res.send ("Error while creating skill");
                 };
                     },
