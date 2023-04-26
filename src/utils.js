@@ -5,7 +5,7 @@ const typeorm = require("typeorm")
         type: "sqlite",
         database: "./wildersdbs.sqlite",
         synchronize: true,
-        entities: [require("./entity/Wilder")],
+        entities: [require("./entity/Wilder"), require("./entity/Skill")],
         logging :["query","error"]
       })
  }

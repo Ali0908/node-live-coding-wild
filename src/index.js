@@ -2,6 +2,7 @@ const express = require("express");
 
 const dataSource = require ("./utils").dataSource;
 const wilderController = require ("./controller/wilder");
+const skillController = require ("./controller/skill");
 
 const app = express();
 
@@ -12,6 +13,20 @@ app.get("/", (req, res) => {
 });
 
 app.post ("/api/wilder", wilderController.create);
+app.get("/api/wilder", wilderController.read);
+app.put("/api/wilder", wilderController.update);
+app.delete("/api/wilder", wilderController.delete);
+app.put("/api/addSkill", wilderController.addSkill);
+
+
+app.post ("/api/skill", skillController.create);
+app.get("/api/skill", skillController.read);
+app.put("/api/skill", skillController.update);
+app.delete("/api/skill", skillController.delete);
+
+app.use((req, res, next) => {
+  res.status(404).send ("Sorry can't find that");
+});
 const start = async () => {
   await dataSource.initialize();
   // dataSource.getRepository(Wilder).save({name: "First Wilder"});
