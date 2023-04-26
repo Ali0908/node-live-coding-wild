@@ -1,11 +1,11 @@
-POST   http://localhost:3000/api/wilder
+POST   http://localhost:5000/api/wilder
 Content-Type: application/json
 
 {
-    "name": "Jean"
+    "name": "Bobby Doe"
 }
 ###
-DELETE http://localhost:3000/api/wilder
+DELETE http://localhost:5000/api/wilder
 Content-Type: application/json
 
 {
@@ -13,11 +13,11 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/api/wilder
+GET http://localhost:5000/api/wilder
 Content-Type: application/json
 
 ###
-PUT  http://localhost:3000/api/wilder
+PUT  http://localhost:5000/api/wilder
 Content-Type: application/json
 
 {
@@ -28,7 +28,7 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:3000/api/addSkill
+PUT http://localhost:5000/api/addSkill
 Content-Type: application/json
 
 {
