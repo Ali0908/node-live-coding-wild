@@ -22,12 +22,12 @@ create: async (req, res) => {
             console.log(grades);
 
             const wilders = await dataSource.getRepository(Wilder).find();
-            console.log(wilders)
+            console.log("wilders", wilders);
 
             const data = wilders.map((wilder) => {
                 const wilderGrades = grades.filter(
                     (grade) => grade.wilder.id === wilder.id
-                )
+                );
                 const wilderGradeLean = wilderGrades.map((el) => {
                     return { title: el.skill.name, votes: el.grade};
                 });
@@ -37,8 +37,7 @@ create: async (req, res) => {
                 }
                 console.log(result);
                 return result
-
-            })
+            });
             res.send(data)
 
         } catch(error) {
@@ -74,7 +73,7 @@ addSkill: async (req, res) => {
                    
                     const wilderToUpdate = await dataSource
                     .getRepository(Wilder)
-                    .findOneBy({  name:req.body.wilderName});
+                    .findOneBy({ name: req.body.wilderName });
                     console.log(wilderToUpdate);
                    
                     const skillToAdd = await dataSource
@@ -87,7 +86,7 @@ addSkill: async (req, res) => {
                 }
                 catch (err) {
                     console.log(err);
-                    res.send ("Error while creating skill");
+                    res.send ("Error while adding skills");
                 };
                     },
         

@@ -28,7 +28,7 @@ console.log(wildersState, "wilder");
     <AddWilder />
       <h2>Wilders</h2>
       <section className="card-row">
-      {wildersState?.map((wilder) => (
+      {wildersState?.map((wilder)  => (
         <Wilder
         key={wilder.id}
         name={wilder.name}

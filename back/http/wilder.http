@@ -2,14 +2,15 @@ POST   http://localhost:5000/api/wilder
 Content-Type: application/json
 
 {
-    "name": "Bobby Doe"
+    "name": "Louise Doe"
+
 }
 ###
 DELETE http://localhost:5000/api/wilder
 Content-Type: application/json
 
 {
-  "id": 20
+  "id": 13
 }
 
 ###
@@ -21,9 +22,9 @@ PUT  http://localhost:5000/api/wilder
 Content-Type: application/json
 
 {
-  "id": 1,
+  "id": 12,
   "newData": {
-    "name": "John"
+    "name": "John Doe"
   }
 }
 
@@ -32,6 +33,6 @@ PUT http://localhost:5000/api/addSkill
 Content-Type: application/json
 
 {
-    "wilderName": "Jean",
+    "wilderName": "Jacques Doe",
     "skillName": "Javascript"
 }

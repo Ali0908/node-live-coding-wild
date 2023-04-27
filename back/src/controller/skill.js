@@ -11,24 +11,20 @@ module.exports = {
             }
         catch (error) {
             console.log(error);
-        res.send ("Error wile creating wilder");
+        res.send ("Error while creating wilder");
         }
         },
     read: async (req, res) => {
         try {
-            await dataSource
-            .getRepository(Skill)
-            .find()
-            res.send ();
-            
+            const data = await dataSource.getRepository(Skill).find();
+            res.send (data); 
         }
         catch (error) {
             console.log(error);
-            res.send();
+            res.send("Skills error");
         };
             },
     update:  async (req, res) => {
-    
             try {
                 await dataSource
                 .getRepository(Skill)
@@ -37,7 +33,7 @@ module.exports = {
             }
             catch(error) {
                 console.log(error);
-                res.send ("Error wile creating wilder");
+                res.send ("Error while creating wilder");
             };
                 },
     delete:  async (req, res) => {

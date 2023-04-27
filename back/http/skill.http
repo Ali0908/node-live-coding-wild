@@ -2,7 +2,7 @@ POST   http://localhost:5000/api/skill
 Content-Type: application/json
 
 {
-    "name": "C##"
+    "name": "Go"
 }
 ###
 DELETE http://localhost:5000/api/skill
@@ -21,7 +21,7 @@ PUT  http://localhost:5000/api/skill
 Content-Type: application/json
 
 {
-  "id": 1,
+  "id": 2,
   "newData": {
     "name": "Rust"
   }

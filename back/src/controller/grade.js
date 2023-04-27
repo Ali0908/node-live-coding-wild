@@ -23,7 +23,7 @@ module.exports = {
 
         } catch(error) {
             console.log(error);
-            res.send("Error while creating skill");
+            res.send("Error while creating grade");
             }
     },
     read: async (req, res) => {

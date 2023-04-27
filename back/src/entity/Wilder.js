@@ -14,6 +14,6 @@ module.exports = new EntitySchema ({
         city: {
             type: "text",
             nullable : true,
-        }
+        },
     },
 });
