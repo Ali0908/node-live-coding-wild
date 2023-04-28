@@ -1,4 +1,5 @@
 const Skill = ({ title, votes }) => {
+  console.log(title, "error");
     return (
       <li>
         {title}

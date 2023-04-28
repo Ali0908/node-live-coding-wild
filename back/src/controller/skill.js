@@ -28,10 +28,9 @@ module.exports = {
             try {
                 await dataSource
                 .getRepository(Skill)
-                .update(req.body.id, req.body.newData)
-                    res.send ("Update a wilder");
-            }
-            catch(error) {
+                .update(req.body.id, req.body.newData);
+                res.send ("Update a wilder");
+            } catch(error) {
                 console.log(error);
                 res.send ("Error while creating wilder");
             };

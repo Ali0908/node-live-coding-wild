@@ -1,7 +1,7 @@
 import avatar from "../assets/avatar.png";
 import Skill from "./Skills";
 
-const Wilder = ({ name }) => {
+const Wilder = ({ name, skills, city}) => {
   return (
     <article className="card">
       <img src={avatar} alt="Jane Doe Profile" />
@@ -14,10 +14,14 @@ const Wilder = ({ name }) => {
       </p>
       <h4>Wild Skills</h4>
       <ul className="skills">
-        <Skill />
-        <Skill />
-        <Skill />
+      {skills?.map((skill)  => (
+        <Skill
+      key={skill.id}
+      title={skill?.title}
+      votes={skill?.votes}
+          /> ))}
       </ul>
+      <span>{city}</span>
     </article>
   );
 };
