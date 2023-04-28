@@ -21,6 +21,7 @@ const Wilder = ({ name, skills, city}) => {
       votes={skill?.votes}
           /> ))}
       </ul>
+      <h4>City</h4>
       <span>{city}</span>
     </article>
   );
